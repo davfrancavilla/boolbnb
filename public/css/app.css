@@ -10942,3 +10942,41 @@ header nav img {
   height: 50px;
 }
 
+.sfondo {
+  background-color: #00000008;
+}
+
+.card-header {
+  color: red;
+}
+
+.form-group {
+  color: red;
+}
+
+.card-body {
+  height: 200px;
+}
+
+label {
+  color: red;
+}
+
+.card {
+  height: 450px;
+}
+
+.rec {
+  background-color: #00000008;
+}
+
+h3 {
+  color: red;
+  margin-left: 35px;
+  margin-top: 20px;
+}
+
+ul {
+  margin-top: 30px;
+}
+

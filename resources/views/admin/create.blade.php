@@ -1,3 +1,6 @@
+@extends('layouts.app')
+@section('content')
+
 @if ($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -10,37 +13,41 @@
 <form action="{{route('apartments.store')}}" method="post" enctype="multipart/form-data">
     @csrf
     @method('POST')
+
+<div class="container">
+
+
   <div class="form-group">
     <label for="title">Titolo</label>
-    <input name="title" type="text" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Inserisci titolo appartamento" value="{{old('title')}}">
+    <input name="title" type="text" style="width :300px;height:40px" class="form-control" id="title" aria-describedby="emailHelp" placeholder="Inserisci titolo appartamento" value="{{old('title')}}">
   </div>
   <div class="form-group">
     <label for="rooms">Camere</label>
-    <input name="rooms" type="number" class="form-control" id="rooms" placeholder="Numero camere" value="{{old('rooms')}}">
+    <input name="rooms" type="number" style="width :200px;height:40px" class="form-control" id="rooms" placeholder="Numero camere" value="{{old('rooms')}}">
   </div>
   <div class="form-group">
     <label for="beds">Letti</label>
-    <input name="beds" type="number" class="form-control" id="beds" placeholder="Numero letti" value="{{old('beds')}}">
+    <input name="beds" type="number" style="width :200px;height:40px" class="form-control" id="beds" placeholder="Numero letti" value="{{old('beds')}}">
   </div>
   <div class="form-group">
     <label for="bathrooms">Bagni</label>
-    <input name="bathrooms" type="number" class="form-control" id="bathrooms" placeholder="Numero bagni" value="{{old('bathrooms')}}">
+    <input name="bathrooms" type="number" style="width :200px;height:40px" class="form-control" id="bathrooms" placeholder="Numero bagni" value="{{old('bathrooms')}}">
   </div>
   <div class="form-group">
     <label for="square_meters">Dimensione</label>
-    <input name="square_meters" type="number" class="form-control" id="square_meters" placeholder="Metri quadrati" value="{{old('square_meters')}}">
+    <input name="square_meters" type="number" style="width :200px;height:40px" class="form-control" id="square_meters" placeholder="Metri quadrati" value="{{old('square_meters')}}">
   </div>
   <div class="form-group">
     <label for="description">Descrizione</label>
-    <textarea name="description" class="form-control" id="description" rows="3">{{old('description')}}</textarea>
+    <textarea name="description" style="width :600px;" class="form-control" id="description" rows="3">{{old('description')}}</textarea>
   </div>
   <div class="form-group">
     <label for="latitude">Latitudine</label>
-    <input name="latitude" type="number" class="form-control" id="latitude" placeholder="Latitudine" value="{{old('latitude')}}">
+    <input name="latitude" style="width :200px;height:40px" type="number" class="form-control" id="latitude" placeholder="Latitudine" value="{{old('latitude')}}">
   </div>
   <div class="form-group">
     <label for="longitude">Longitudine</label>
-    <input name="longitude" type="number" class="form-control" id="longitude" placeholder="Longitudine" value="{{old('longitude')}}">
+    <input name="longitude" style="width :200px;height:40px" type="number" class="form-control" id="longitude" placeholder="Longitudine" value="{{old('longitude')}}">
   </div>
   <div class="form-group">
     <label for="image">Foto</label>
@@ -49,7 +56,7 @@
   <div class="form-group form-check">
       {{-- MODIFICA "disponibile?" --}}
     <label for="available">Disponibile?</label>
-    <input name="available" type="checkbox" class="form-control" id="available" name="available"
+    <input name="available" type="checkbox" style="width :20px;height:20px" class="form-control" id="available" name="available"
         {{old('available') ? 'checked' : ''}}>
   </div>
 
@@ -85,3 +92,5 @@
 
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+</div>
+@endsection
